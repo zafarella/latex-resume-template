@@ -7,16 +7,16 @@ Latex based one page resume template which looks beautiful and maintanable.
 
 Usage
 ==============
-If you are as lazy as I am you will like it. This repo has everything you need 
+If you are as lazy as I am you will like it. This repo has everything you need
 to avoid pain of writing resume and having snapshot of it for some particular time.
 
 There is a bash file, which will compile for you the resume (`build.sh`) and will
 give you final output with proper name. This is nice because you can just come to
-this folder update your resume and get it released. It is assumed you will not change 
-things, just the content. You can keep it for years like this avoiding many pain of 
+this folder update your resume and get it released. It is assumed you will not change
+things, just the content. You can keep it for years like this avoiding many pain of
 "my resume".
 
-I don't have windows anymore for long time, so windows users, apologies I 
+I don't have windows anymore for long time, so windows users, apologies I
 don't have batch file for you.
 
 When cloned repo, change your name in the `build.sh` and you done. Launch the bash
