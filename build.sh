@@ -16,7 +16,7 @@ hash pdflatex 2>/dev/null || { echo >&2 "No pdflatex has been found.  Aborting. 
 cur_day=$(date +_%b_%Y)
 todays_date=$(date +%F)
 resume_file='resume-template.tex'
-pdf_out='resume.pdf'
+pdf_out='resume-template.pdf'
 mylocation='NYC'
 existing_file="FirstName_LastName_SDE_Resume_$mylocation"_$cur_day".pdf"
 
