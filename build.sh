@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/usr/bin/env bash
 #
 # Copyright (C) Zafar Khaydarov
 #
@@ -10,6 +10,7 @@
 #
 #  How to use:
 #   Just launch the file in bash
+#
 
 hash pdflatex 2>/dev/null || { echo >&2 "No pdflatex has been found.  Aborting. If you use brew install using: 'brew cask install mactex'"; exit 1; }
 
