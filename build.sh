@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Copyright (C) Zafar Khaydarov
+# Copyright (C) 2014- 2018 Zafar Khaydarov
 #
 #  What it does:
 #  -- builds pdf output and stores version of the output in the ARC directory
@@ -42,6 +42,8 @@ pdflatex "${resume_file}" >> /dev/null;
 pdflatex "${resume_file}" >> /dev/null;
 pdflatex "${resume_file}" >> /dev/null;
 
+pdflatex preparationGrid.tex >> /dev/null;
+
 clear
 
 echo "---------------------------------------"
@@ -56,6 +58,10 @@ rm -rf *aux *bbl *log *out *blg
 echo "Done";
 
 open ${existing_file}
+open preparationGrid.pdf
+
+
+
 # including in VCS
 # echo -e "Please version the revision -- Enter commit message for revision \n\n"
 # read -n1 -r -p "Press any key to continue..." key
