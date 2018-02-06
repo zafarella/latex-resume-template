@@ -1,0 +1,97 @@
+% Don't like 10pt? Try 11pt or 12pt
+\documentclass[11pt]{article}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Layout: Puts the section titles on left side of page
+\reversemarginpar
+
+\usepackage[paper=letterpaper,
+            marginparwidth=5mm,       % Length of section titles
+            marginparsep=1.5mm,       % Space between titles and text
+            margin=20mm,              % margins
+            %includemp,
+			noheadfoot,
+			top=10mm,
+			pdftex
+            ]{geometry}
+            
+\usepackage{mathtools}            
+\usepackage{blindtext}
+
+%% More layout: Get rid of indenting throughout entire document
+\setlength{\parindent}{0in}
+
+%% This gives us fun enumeration environments. compactitem will be nice.
+\usepackage{paralist}
+
+% \usepackage{fontsetname}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\pagestyle{empty}      % Uncomment this to get rid of page numbers
+% Finally, give us PDF bookmarks
+\usepackage{color,hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\section}[2]%
+        {\pagebreak[2]\vspace{0.01\baselineskip}
+         \phantomsection\addcontentsline{toc}{section}{#1}%
+		 \textsc{{#1}}%\rmfamily{\scshape{#1}}
+         \hspace{50in}\vspace{2.5mm}\noindent\hrule
+        }
+
+% An itemize-style list with lots of space between items
+\newenvironment{outerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1]}{\end{itemize}%
+         \vspace{-.8\baselineskip}}
+
+% An environment IDENTICAL to outerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{lonelist}[1][\enskip\textbullet]%
+        {\vspace{-\baselineskip}\begin{list}{#1}{%
+        \setlength{\partopsep}{6pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{list}\vspace{-.6\baselineskip}}
+
+% An itemize-style list with little space between items
+\newenvironment{innerlist}[1][\enskip\textbullet]%
+        {\begin{compactitem}[#1]}{\end{compactitem}
+        \vspace{0.5\baselineskip}}
+
+\newcommand{\hlinewidth}{0.01pt}
+
+\newcommand{\jobitem}[3]{%
+  \par\vspace{2pt}\noindent
+  \makebox[0pt][l]{#1}%
+  \makebox[\textwidth][c]{#2}%
+  \makebox[0pt][r]{\textbf{#3}}\par\vspace{1pt}}
+  
+  
+  \usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{
+             colorlinks
+            ,breaklinks
+            ,linkcolor=darkblue
+            ,urlcolor=darkblue
+            ,anchorcolor=darkblue
+            ,citecolor=darkblue
+            %,bookmarks=true
+            ,pdfstartview={FitB}
+            ,pdftoolbar={true}
+            ,pdfdisplaydoctitle={true}
+            ,baseurl=http://linkedin.com/in/
+            ,pdflang=en-US
+            ,pdfauthor={}
+            ,pdfsubject={Resume}
+            ,pdftitle={Compiled at \today}
+            ,pdfkeywords={Resume,Job, Software Developer,Software Engineer}
+            }
+
+\usepackage{times}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{lmodern}
+\usepackage{textcomp}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
